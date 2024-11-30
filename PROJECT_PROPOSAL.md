@@ -84,12 +84,12 @@ Notice how the system provides continual feedback. When the user attempts to mak
 
 Of course, this model of direct manipulation is unlikely to work for anything but the simplest identities. The system will also need to provide affordances for modularity -- UIs for recording complex chains of rewrites, and applying them to more complicated proof states. These will necessarily be more complicated to use, but we hope that they can still be in the spirit of direct manipulation.
 
-As a sanity check, the proofs from this system should be able to be compiled to run in a traditional, trusted proof assistant. More exotically, we might compile them to other kinds of visualization. For example, can compile proofs about quadratics in the real numbers to proofs about areas of rectangles. The left-distributivity axiom now takes the form:
+As a sanity check, the proofs from this system should be able to be compiled to run in a traditional, trusted proof assistant. More exotically, we might compile them to other things, like visualizations. For example, can compile proofs about quadratics in the real numbers to proofs about areas of rectangles. The left-distributivity axiom now takes the form:
 
 ![representation](./images/representation.jpg)
 
 This sort of compilation is what mathematicians call a "representation" of one sort of mathematics -- in this case, algebra -- in terms of another sort of mathematics -- in this case, geometry. Much of modern algebra theory grew out of the study of representations. Building these kinds of representations into the system can help anchor students' understanding of abstract subject matter. 
 
-Overall, we expect that working mathematicians will consider most of the proofs from our system "trivial", that is, already known. But we do not expect that learning mathematicians will consider our system trivial.
+Overall, we expect that working mathematicians will consider most of the proofs coming out of our system "trivial", that is, already known. But we do not expect that learning mathematicians will consider our system trivial.
 
 If any new mathematics comes out of this project, it is likely to be in the design of data structures for translating between user interactions, proofs, and representations. Contributions to higher category theory may or may not emerge.
