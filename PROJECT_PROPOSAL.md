@@ -9,13 +9,17 @@ Mathematical formal systems have exploded in breadth and scope over the past cen
 The public has no idea that any of this is going on. In fact they have little understanding of what mathematicians do at all. There *is* public interest in mathematics, as demonstrated by the popularity of events like the "Summers of Math Exposition" on YouTube. However, most of the infrastructure of contemporary mathematics remains out-of-reach except to experts.
 
 This might be surprising to people working in these fields. Contemporary algebra, and "higher category theory" especially, tend to build on simple and intuitive spatial metaphors. For example:
+
 - Rearranging trees (traditional algebra)
 - Gluing together triangles (commutative diagrams)
 - Sliding around beads on tangled wires (string diagrams)
+
 And so on. How could anybody not understand these ideas?
 
 Part of the issue is that the literature is dense and abstract. There's a saying:
+
 > "Trying to learn math by reading only published papers is like trying to learn chess by reading only chess notation."
+
 Published proofs tend to convey exactly enough information to convince a *specialist* that an argument works. A non-specialist, however, will have absolutely no idea what's going on.
 
 This applies twice over to computer-checked proofs. Proof systems are targeted towards expert users, who are *already familiar* with various complicated rulesets (software development tools, dependent type systems, higher-order unification, etc.) A proof written with such an assistant is very convincing *to the person who wrote it*, and maybe her friends, but to non-experts it is a black box. 
