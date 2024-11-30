@@ -88,7 +88,7 @@ Notice how the system provides continual feedback. When the user attempts to mak
 
 Of course, this model of direct manipulation is unlikely to work for anything but the simplest identities. The system will also need to provide affordances for modularity -- UIs for recording complex chains of rewrites, and applying them to more complicated proof states. These will necessarily be more complicated to use, but we hope that they can still be in the spirit of direct manipulation.
 
-As a sanity check, the proofs from this system should be able to be compiled to run in a traditional, trusted proof assistant. More exotically, we might compile them to other things, like visualizations. For example, can compile proofs about low-degree polynomials in the real numbers to proofs about areas of rectangles. The left-distributivity axiom now takes the form:
+As a sanity check, the proofs from this system should be able to be compiled to run in a traditional, trusted proof assistant. More exotically, we might compile them to other things, like visualizations. For example, we can compile proofs about low-degree polynomials in the real numbers to proofs about areas of rectangles. The left-distributivity axiom now takes the form:
 
 ![representation](./images/representation.jpg)
 
