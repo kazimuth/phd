@@ -68,7 +68,7 @@ theorem left_distrib {R : Type v} [Mul R] [Add R] [LeftDistribClass R] (a b c : 
 a * (b + c) = a * b + a * c
 ```
 
-And figure the correct way to invoke this in the local context, correctly instantiating all the generic arguments, keeping track of customizable operator precedence and associativity rules, etc etc. If they apply it incorrectly, they can expect a long and hard-to-understand error message.
+And figure out the correct way to invoke this in the local context, correctly instantiating all the generic arguments, keeping track of customizable operator precedence and associativity rules, etc etc. If they apply it incorrectly, they can expect a long and hard-to-understand error message.
 
 We propose to, instead, build direct-manipulation, [**what you see is what you get**](https://en.wikipedia.org/wiki/WYSIWYG) interfaces for various kinds of algebra. These should provide users with large, readable visualizations of proof state -- traditional terms, commutative diagrams, etc. 
 
@@ -92,7 +92,7 @@ As a sanity check, the proofs from this system should be able to be compiled to 
 
 ![representation](./images/representation.jpg)
 
-This sort of compilation is what mathematicians call a "representation" of one sort of mathematics -- in this case, algebra -- in terms of another sort of mathematics -- in this case, geometry. Much of modern algebra theory grew out of the study of representations. Building these kinds of representations into the system can help anchor students' understanding of abstract subject matter. 
+This sort of compilation is what mathematicians call a "representation" of one sort of mathematics -- in this case, algebra -- in terms of another sort of mathematics -- in this case, geometry. Much of modern algebra grew out of the study of representations. Building these kinds of representations into the system can help anchor students' understanding of abstract subject matter. 
 
 Overall, we expect that working mathematicians will consider most of the proofs coming out of our system "trivial", that is, already known. But we do not expect that learning mathematicians will consider our system trivial.
 
