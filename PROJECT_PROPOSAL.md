@@ -115,6 +115,4 @@ As a sanity check, the proofs from this system should be able to be compiled to 
 
 This sort of compilation is what mathematicians call a "representation" of one sort of mathematics -- in this case, algebra -- in terms of another sort of mathematics -- in this case, geometry. Much of modern algebra grew out of the study of representations. Building these kinds of representations into the system can help anchor students' understanding of abstract subject matter. 
 
-Overall, we expect that working mathematicians will consider most of the proofs coming out of our system "trivial", that is, already known. 
-
-If any new mathematics comes out of this project, it is likely to be in the design of data structures for translating between user interactions, proofs, and representations. Contributions to higher category theory may or may not emerge.
+Overall, we expect that working mathematicians will consider most of the proofs coming out of our system to be relatively trivial. If any new mathematics comes out of this project, it is likely to be in the design of data structures for translating between user interactions, proofs, and representations. Contributions to higher category theory may or may not emerge.
