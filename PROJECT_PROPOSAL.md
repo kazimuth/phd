@@ -2,7 +2,7 @@
 
 ## Problem
 
-A "proof" is an argument considered convincing by some community of practice, like plumbers or mathematicians. A "formal system" is a rulebook declaring precisely which proofs are considered convincing. An "Algebraic system" is a kind of formal system that generally involves *equations* and *rewriting rules*.
+A "proof" is an argument considered convincing by some community of practice, like plumbers or mathematicians. A "formal system" is a rulebook declaring precisely which proofs are considered convincing. An "algebraic system" is a flavor of formal system that generally involves *equations* and *rewriting rules*.
 
 For example, in high school, we all learn an algebraic system that involves equations and rewrites like this:
 
@@ -18,6 +18,8 @@ a² + 2ab + b² = c² + 2ab
 Subtract "2ab" from both sides:
 
    a² + b² = c²
+
+...
 ```
 
 
