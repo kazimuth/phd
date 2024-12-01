@@ -47,7 +47,7 @@ It would be nice to think that exposition alone could solve this problem. Howeve
 
 ## Proposed solution
 
-We hypothesize that it may be possible to build software tools that make it easier to teach and learn contemporary algebraic systems.
+We hypothesize that it may be possible to build software tools that make it easier to teach and learn contemporary algebra.
 
 To be clear, such tools alone can't solve all of the problems above. No amount of software can replace a good teacher, or change conventions of communication within a field.
 
