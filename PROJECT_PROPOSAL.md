@@ -2,15 +2,34 @@
 
 ## Problem
 
-A "proof" is an argument considered convincing by some community of practice, like plumbers or mathematicians. A "formal system" is a rulebook declaring precisely which proofs are considered convincing. "Algebra" is hard to define, but you know it when you see it.
+A "proof" is an argument considered convincing by some community of practice, like plumbers or mathematicians. A "formal system" is a rulebook declaring precisely which proofs are considered convincing. An "Algebraic system" is a kind of formal system that generally involves *equations* and *rewriting rules*.
 
-Mathematical formal systems have exploded in breadth and scope over the past century. Interest in "mathematical foundations" -- a ruleset for all of mathematics -- has remained keen since the notion was first conceived, despite its being proven impossible. In the past few decades, uptake of computer-checked formal proof assistants has grown, with substantial bodies of work being formalized. Much of this work has an algebraic and constructive flavor -- it mainly involves concrete manipulations of tree-like data structures.
+For example, in high school, we all learn an algebraic system that involves equations and rewrites like this:
 
-The public has no idea that any of this is going on. In fact they have little understanding of what mathematicians do at all. There *is* public interest in mathematics, as demonstrated by the popularity of events like the "Summers of Math Exposition" on YouTube. However, most of the infrastructure of contemporary mathematics remains out-of-reach except to experts.
+```
+Start with:
 
-This might be surprising to people working in these fields. Contemporary algebra, and "higher category theory" especially, tend to build on simple and intuitive spatial metaphors. For example:
+(a+b)(a+b) = c² + 2ab
 
-- Rearranging trees (traditional algebra)
+Expand (a+b)(a+b):
+
+a² + 2ab + b² = c² + 2ab
+
+Subtract "2ab" from both sides:
+
+   a² + b² = c²
+```
+
+
+The study of algebraic systems has exploded in breadth and scope over the past century. A huge variety of systems have been proposed and investigated; these are in daily use across mathematics, physics, and computer science. Interest in "mathematical foundations" -- an algebraic system encompassing all of mathematics -- has remained keen since the notion was first conceived, despite its being proved impossible.
+
+In the past few decades, uptake of computer-checked "formal proof assistants" has grown. These are software systems that allow users to construct computer-checked algebraic proofs. Large bodies of work have been successfully formalized and checked using these systems.
+
+The public has no idea that any of this is going on. In fact they have little understanding of what mathematicians do at all. There *is* public interest in mathematics, as demonstrated by the popularity of events like the "Summers of Math Exposition" on YouTube. However, most of the algebraic infrastructure of contemporary mathematics remains out-of-reach except to experts.
+
+This might be surprising to people working in these fields. Contemporary algebraists -- and the school studying "higher category theory" especially -- tend to base their systems on simple and intuitive spatial metaphors. For example:
+
+- Rearranging text (traditional algebra)
 - Gluing together triangles (commutative diagrams)
 - Sliding around beads on tangled wires (string diagrams)
 
@@ -26,9 +45,9 @@ This applies twice over to computer-checked proofs. Proof systems are targeted t
 
 Other mathematicians may be convinced *that* the proof is correct, simply by its being written in a proof assistant. Surprisingly, though, looking at its source code will not tell them much about how it works, at least without in-depth study. This makes it harder to establish trust within the mathematical community. Results that have only been checked by computer, such as the Four-Color theorem, are widely mistrusted, and much effort has been made to find fully human-checkable proofs of the same.
 
-To summarize: a lot of very nice formalism is going on. However, most of it is inaccessible to most everybody.
+To summarize: a lot of very nice algebra is going on. However, most of it is inaccessible to almost everybody.
 
-It would be nice to think that exposition alone could solve this problem. However, for people who actually need to use mathematics, exposition alone is not enough. To truly communicate a mathematical result, not only the *what* must be communicated, but also the *how*, and at least some of the *why*. Someone studying mathematics can't just memorize it by rote: they have enact it themselves. To quote a [physics educator](https://worrydream.com/refs/Hestenes_2002_-_Reforming_the_Mathematical_Language_of_Physics.pdf):
+It would be nice to think that exposition alone could solve this problem. However, for people who actually need to use algebra, exposition alone is not enough. To truly communicate an algebraic result, not only the *what* must be communicated, but also the *how*, and at least a little of the *why*. Someone studying algebra can't just memorize it by rote: they have enact it themselves. To quote a [physics educator](https://worrydream.com/refs/Hestenes_2002_-_Reforming_the_Mathematical_Language_of_Physics.pdf):
 
 > **Conceptual learning is a creative act.**
 > This is the crux of the so-called constructivist revolution in education, most
@@ -49,9 +68,9 @@ It would be nice to think that exposition alone could solve this problem. Howeve
 
 We hypothesize that it may be possible to build software tools that make it easier to teach and learn contemporary algebra.
 
-To be clear, such tools alone can't solve all of the problems above. No amount of software can replace a good teacher, or change conventions of communication within a field.
+To be clear, such tools alone can't solve all of the problems above. No amount of software can replace a good teacher, or change conventions of communication within scientific fields.
 
-What tools might be able to do is provide an on-ramp for new students. We hypothesize that students mainly get tripped up on simple, practical details:
+What tools can do is provide an on-ramp for new students. We hypothesize that algebra students mainly get tripped up on simple, practical details:
 
 - What rules are in play here?
 - Am I allowed to do this?
@@ -61,7 +80,7 @@ Algebra requires a great deal of precision. It is easy for inexperienced algebra
 
 Fortunately, computers are very good at keeping track of details. Proof assistants provide examples *par excellence* of what it means to specify rules and verify that they have been followed.
 
-The issue with existing proof assistants is that they have expert-oriented interfaces. They present users with densely packed information about proof state, and require them to remember lots of names for various tree-manipulation strategies. If a user wants to, say, rewrite `a(b + c)` as `ab + ac`, they can't simply click and drag the `b` outside the parentheses. They have to go through the documentation of their proof assistant to find a rewrite rule declaration, say:
+The issue with existing proof assistants is that they have expert-oriented interfaces. They present users with densely packed information about proof state, and require them to remember lots of names for various term-manipulation strategies. If a user wants to, say, rewrite `a(b + c)` as `ab + ac`, they can't simply click and drag the `b` outside the parentheses. They have to go through the documentation of their proof assistant to find a rewrite rule declaration, say:
 
 ```lean
 theorem left_distrib {R : Type v} [Mul R] [Add R] [LeftDistribClass R] (a b c : R) :
@@ -79,12 +98,12 @@ Very simple interactions should be possible by *direct manipulation* of these vi
 - `a + 0 = a`
 - ...
 
-An example sequence of simple interactions might look like this:
+An sequence of simple interactions might look like this:
 
 ![example interaction](./images/dragging.jpg)
 ![example interaction 2](./images/dragging2.jpg)
 
-Notice how the system provides continual feedback. When the user attempts to make a valid move, the system reassures them it is valid and records it. Invalid moves are simply not possible. The system invites experimentation, encouraging the user to freely explore.
+Notice how the system provides continual feedback. When the user attempts to make a valid rewrite, the system reassures them it is valid and records it. Invalid moves are simply not possible. The system invites experimentation, encouraging the user to freely explore.
 
 Of course, this model of direct manipulation is unlikely to work for anything but the simplest rewrites. The system will also need to provide affordances for modularity -- UIs for composing rewrite rules together and applying them to complicated proof states. These will necessarily be more complicated to use, but we hope that they can still be in the spirit of direct manipulation.
 
